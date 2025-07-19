@@ -1,0 +1,12 @@
+<tr id="costumer-{{costumer.id}}">
+    <th scope="row">{{ costumer.id }}</th>
+    <td>{{ costumer.Name }}</td>
+    <td>{{ costumer.Email }}</td>
+    <td>
+        <button class="btn btn-secondary" c-get="{{url_for('costumer.get_costumer', costumer_id=costumer.id)}}" c-target="#show-costumer" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button>
+
+        <button class="btn btn-primary" c-get="{{url_for('costumer.edit_costumer_form', costumer_id=costumer.id)}}" c-target="#costumer-form">Edit</button>
+
+        <button class="btn btn-danger" c-delete="{{url_for('costumer.delete_costumer', costumer_id=costumer.id)}}" c-remove-closest="tr">Delete</button>
+    <td>
+</tr>
